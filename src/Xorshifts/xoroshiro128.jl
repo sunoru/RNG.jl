@@ -27,6 +27,9 @@ for (star, plus, starstar) in (
                 seed!(r, seed)
                 r
             end
+            function $rng_name(x, y)
+                new(0, 0)
+            end
         end
 
         $rng_name(seed::Integer) = $rng_name(split_uint(seed % UInt128))
